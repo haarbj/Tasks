@@ -44,33 +44,44 @@ struct Task {
 
     // The date the task was created
     // This property is set as the current date whenever the task is initially created.
-    let createdDate: Date = Date()
+    var createdDate: Date = Date()
 
     // An id (Universal Unique Identifier) used to identify a task.
-    let id: String = UUID().uuidString
+    var id: String = UUID().uuidString
 }
 
 // MARK: - Task + UserDefaults
-extension Task {
+extension Task: Codable {
 
-
-    // Given an array of tasks, encodes them to data and saves to UserDefaults.
+    // Save an array of tasks to UserDefaults
     static func save(_ tasks: [Task]) {
-
-        // TODO: Save the array of tasks
+        let defaults = UserDefaults.standard
+        let encodedData = try! JSONEncoder().encode(tasks)
+        defaults.set(encodedData, forKey: "tasks")
     }
 
-    // Retrieve an array of saved tasks from UserDefaults.
+    // Retrieve an array of saved tasks from UserDefaults
     static func getTasks() -> [Task] {
-        
-        // TODO: Get the array of saved tasks from UserDefaults
-
-        return [] // 👈 replace with returned saved tasks
+        let defaults = UserDefaults.standard
+        if let data = defaults.data(forKey: "tasks") {
+            let decodedTasks = try! JSONDecoder().decode([Task].self, from: data)
+            return decodedTasks
+        } else {
+            return []
+        }
     }
 
-    // Add a new task or update an existing task with the current task.
+    // Add a new task or update an existing task with the current task
     func save() {
-
-        // TODO: Save the current task
+        var tasks = Task.getTasks() // Retrieve the saved tasks
+        if let index = tasks.firstIndex(where: { $0.id == self.id }) {
+            // If the task already exists, update it
+            tasks.remove(at: index)
+            tasks.insert(self, at: index)
+        } else {
+            // If the task is new, add it to the array
+            tasks.append(self)
+        }
+        Task.save(tasks) // Save the updated tasks
     }
 }

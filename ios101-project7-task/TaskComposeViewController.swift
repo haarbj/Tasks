@@ -28,7 +28,7 @@ class TaskComposeViewController: UIViewController {
     //     - The default navigation bar title for this screen has been set in storyboard (i.e. "New Task")
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // 1.
         if let task = taskToEdit {
             titleField.text = task.title

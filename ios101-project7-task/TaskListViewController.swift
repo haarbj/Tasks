@@ -16,7 +16,7 @@ class TaskListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Hide top cell separator
         tableView.tableHeaderView = UIView()
 

@@ -306,6 +306,7 @@
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios101-project7-task/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = TaskMaster;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library access is required to add a photo to complete a task.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -335,6 +336,7 @@
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios101-project7-task/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = TaskMaster;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library access is required to add a photo to complete a task.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
