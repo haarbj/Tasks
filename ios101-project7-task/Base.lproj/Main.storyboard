@@ -227,6 +227,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRW-aO-NaF">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="544"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.42352941179999998" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJh-A5-Rdi" userLabel="Separator View">
                                         <rect key="frame" x="0.0" y="544" width="390" height="1"/>
