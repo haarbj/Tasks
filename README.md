@@ -1,6 +1,6 @@
-# Project 7 - *TaskMaster*
+# *TaskMaster*
 
-Submitted by: **Brody Haar**
+Created by: **Brody Haar**
 
 **TaskMaster** is an app that organizes your tasks based on due date and displays them in both a task and calendar format.
 
