@@ -4,8 +4,6 @@ Submitted by: **Brody Haar**
 
 **TaskMaster** is an app that organizes your tasks based on due date and displays them in both a task and calendar format.
 
-Time spent: **3** hours spent in total
-
 ## Required Features
 
 The following **required** functionality is completed:
